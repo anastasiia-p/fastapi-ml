@@ -13,7 +13,7 @@ def requirements(filepath: str):
 
 
 setup(
-    name="my_project",
+    name="ml_app",
     version="0.1.0",
     packages=find_packages(exclude=["tests"]),
     python_requires=">=3.9",

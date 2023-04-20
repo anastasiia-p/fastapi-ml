@@ -9,6 +9,9 @@ black:
 isort:
 	isort . --skip env/
 
-test:
-	pytest tests/
+test_ml:
+	pytest tests/test_ml.py
+
+test_app:
+	pytest tests/test_app.py
 	

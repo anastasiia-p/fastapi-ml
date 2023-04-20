@@ -29,12 +29,12 @@ def startup_event():
 # Your FastAPI route handlers go here
 @app.get("/predict")
 def predict_sentiment(text: str):
-    sentiment = model(text)[0]
+    sentiment = model(text)
 
     response = SentimentResponse(
         text=text,
-        sentiment_label=sentiment["label"],
-        sentiment_score=sentiment["score"],
+        sentiment_label=sentiment.label,
+        sentiment_score=sentiment.score,
     )
 
     return response
